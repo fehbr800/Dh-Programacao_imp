@@ -81,7 +81,7 @@ switch(tempo){
                         
 
         default:(
-            console.log("Tempo insuficiente!!", "Prato pronto, bom apetite!!!")
+            console.log("Tempo insuficiente!!")
     )    
 
         
