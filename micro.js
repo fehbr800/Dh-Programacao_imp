@@ -1,91 +1,39 @@
 
-//MATHEUS EMANOEL GRUPO:11
+function microondas(opcao,tempo){
 
-console.log(`
-
-1 - Pipoca – 10 segundos (padrão);
-2 - Macarrão – 8 segundos (padrão);
-3 - Carne – 15 segundos (padrão);
-4 - Feijão – 12 segundos (padrão);
-5 - Brigadeiro – 8 segundos (padrão); 
-
-    ESCOLHA SEU PRATO!!
-
-`)
-
-
-
-let prato =  "feijão:"
-let tempo = "12s"
-console.log(prato,tempo)
-
-switch(tempo){
-
-    //PIPOCA
-
-        case 1, "10s":
-            console.log( "Prato pronto, bom apetite!!!");
-            break
-        case 2, "20s":
-            console.log ("Comida queimou!!",  "Prato pronto, bom apetite!!!");
-            break
-        case 3, "30s":
-            console.log("Kbuuumm!!", "Prato pronto, bom apetite!!!")
-            break
-    
-   //MACARRÃO
-        case 4, "8s":
-              console.log( "Prato pronto, bom apetite!!!");
-                break
-        case 5, "16s":
-             console.log ("Comida queimou!!",  "Prato pronto, bom apetite!!!");
-                break
-        case 6, "24s":
-             console.log("Kbuuumm!!", "Prato pronto, bom apetite!!!")
-                break
-
-    //CARNE
-        case 7, "15s":
-              console.log( "Prato pronto, bom apetite!!!");
-                break
-        case 8, "30s":
-             console.log ("Comida queimou!!",  "Prato pronto, bom apetite!!!");
-                break
-        case 9, "45s":
-             console.log("Kbuuumm!!", "Prato pronto, bom apetite!!!")
-                break
-
-
-       //FEIJÃO   
-
-        case 10, "12s":
-            console.log( "Prato pronto, bom apetite!!!");
-                    break
-        case 11, "24s":
-              console.log ("Comida queimou!!",  "Prato pronto, bom apetite!!!");
-                    break
-        case 12, "36s":
-             console.log("Kbuuumm!!", "Prato pronto, bom apetite!!!")
-                    break
-
-    //BRIGADEIRO
-        case 13, "8s":
-             console.log( "Prato pronto, bom apetite!!!");
-                        break
-         case 14, "16s":
-             console.log ("Comida queimou!!",  "Prato pronto, bom apetite!!!");
-                        break
-         case 15, "24s":
-              console.log("Kbuuumm!!", "Prato pronto, bom apetite!!!")
-                        break
-                        
-
-        default:(
-            console.log("Tempo insuficiente!!")
-    )    
-
-        
-}
-
-
-
+    let tempoPadrao = 0;
+    let prato = "";
+    let mensagem;
+  
+    switch(opcao){
+        case 1: prato = "Pipoca"; tempoPadrao = 10; 
+        break;
+        case 2: prato = "Macarrão"; tempoPadrao=8; 
+        break;
+        case 2: prato = "Carne"; tempoPadrao=15; 
+        break;
+        case 3: prato = "Feijão"; tempoPadrao=12;
+         break;
+        case 4: prato = "Brigadeiro"; tempoPadrao=8;
+         break;
+        default: console.log("Essa não é uma opção válida!");
+         return;
+  
+    }
+  
+    mensagem = `${prato} COMIDA PRONTA, ATACAR!!`;
+    if(tempo < tempoPadrao) mensagem = "Tempo insuficiente!!";
+    if(tempo >= tempoPadrao * 2) mensagem = "COMIDA QUEIMOU!!";
+    if(tempo >= tempoPadrao * 3) mensagem = "KBUUMMMM!!";
+  
+    console.log(mensagem);
+  }
+  
+  microondas(1,9);
+  microondas(2,10);
+  microondas(3,29);
+  microondas(4,40);
+  microondas(5,99);
+  microondas(6,110);
+  
+  
