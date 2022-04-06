@@ -1,6 +1,4 @@
-// Checkpoint 3 
-
-// FEITO EM GRUPO COM: Anderson Borges, Dylan ToKumoto, Felipe Godoy e Matheus Emanoel
+// Checkpoint 3 FEITO EM GRUPO COM: Anderson Borges, Dylan Tokumoto, Felipe Godoy e Matheus Emanoel 
 
 // Passo 1:
 function Aluno(nome, faltas, notas) {
@@ -21,16 +19,6 @@ function Aluno(nome, faltas, notas) {
     this.faltasTot = function () {
         return this.faltas++
       }
-    /*this.faltasTot = function () {
-        let numFaltas = this.faltas
-        if (this.faltas >= 0) {
-            numFaltas++
-        }
-        this.faltas = +numFaltas;
-        return numFaltas;
-        // Incrementar a falta dentro do objeto aluno já criado
-    }*/
-
 }
 
 const aluno1 = new Aluno("Linux", 1, [1, 2, 4, 8]);
@@ -39,17 +27,9 @@ const aluno3 = new Aluno("Steve", 6, [8, 8, 8, 8]);
 const aluno4 = new Aluno("Jobs", 1, [6, 5, 5, 8]);
 const aluno5 = new Aluno("Bob", 0, [10, 10, 10, 10]);
 
-// console.log(aluno1.calcularMedia());
-// console.log(aluno2.calcularMedia());
-// console.log(aluno3.calcularMedia());
-// console.log(aluno4.calcularMedia());
-// console.log(aluno5.calcularMedia());
- console.log(aluno1.faltasTot());
- console.log(aluno1);
-// console.log(aluno2.faltasTot());
-// console.log(aluno3.faltasTot());
-// console.log(aluno4.faltasTot());
-// console.log(aluno5.faltasTot());
+// TESTANDO OS MÉTODOS DE MEDIA E DE FALTAS
+console.log(aluno5.calcularMedia());
+console.log(aluno5.faltasTot());
 
 // Passos 3 e 4
 var alunos = [
@@ -101,23 +81,11 @@ let curso = {
 }
 
 
-
+// console passo 4
 curso.criaAluno("Junin", 0, [10, 7, 8, 9]);
-
-
-// console.log(curso.estudantes);
-/*console.log(curso.buscarAluno(aluno1));
-console.log(curso.buscarAluno(aluno2));
-console.log(curso.buscarAluno(aluno3));
-console.log(curso.buscarAluno(aluno4));
-console.log(curso.buscarAluno(aluno5));
-
-console.log(alunos);*/
-
-
-
 console.log(curso.estudantes);
+
+
+// console passo 5 e 6 
 console.log(curso.buscarAluno(aluno5));
 console.log(curso.resultadoAluno());
-
-
